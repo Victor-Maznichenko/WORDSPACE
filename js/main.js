@@ -56,4 +56,12 @@ $(function(){
 		$(this).toggleClass('header-menu__btn--active');
 		$('.menu-mobile').toggleClass('menu-mobile--active');
 	});
+
+	AOS.init({
+		disable: function () {
+			var maxWidth = 1000;
+			return window.innerWidth < maxWidth;
+		},
+		throttleDelay: 99
+	});
 });
